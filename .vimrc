@@ -22,3 +22,20 @@ function! ShiftLine()
     normal! >>
     set smartindent
 endfunction
+
+" Vundle
+" Run 'vim +BundleInstall +qall' after new bundle add
+"
+" Vundle core
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" Vundles
+"
+" Solarized
+" OS X: Import osx-terminal.app-colors-solarized
+Bundle 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+colorscheme solarized
