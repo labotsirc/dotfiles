@@ -34,4 +34,4 @@ plugins=(osx terminalapp macports brew gem textmate vagrant git git-flow github 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/pear/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/git/bin
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/pear/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/share/npm/bin
