@@ -10,9 +10,9 @@ ZSH_THEME="kolo"
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gstat="curl -s https://status.github.com/api/status.json | python -mjson.tool"
-alias gstatm="curl -s https://status.github.com/api/last-message.json | python -mjson.tool"
-alias gstatms="curl -s https://status.github.com/api/messages.json | python -mjson.tool"
+alias gstat="curl -s https://status.github.com/api/status.json | python -mjson.tool | pygmentize -l javascript"
+alias gstatm="curl -s https://status.github.com/api/last-message.json | python -mjson.tool | pygmentize -l javascript"
+alias gstatms="curl -s https://status.github.com/api/messages.json | python -mjson.tool | pygmentize -l javascript"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
