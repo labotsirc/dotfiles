@@ -1,4 +1,6 @@
+set nocompatible
 set ruler
+set number
 set undolevels=5000
 set virtualedit=block
 
@@ -7,8 +9,8 @@ nnoremap <SPACE> <PAGEDOWN>
 " Search enhancements
 set smartcase ignorecase
 highlight Search ctermfg=White ctermbg=Red
-set hlsearch
-nmap <DEL> :nohlsearch<CR>
+set hlsearch incsearch
+nmap <Leader><space> :nohlsearch<CR>
 
 " Smarter indenting
 set autoindent smartindent
@@ -23,19 +25,27 @@ function! ShiftLine()
     set smartindent
 endfunction
 
-" Vundle
-" Run 'vim +BundleInstall +qall' after new bundle add
-"
 " Vundle core
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
 " Vundles
-"
-" Solarized
-" OS X: Import osx-terminal.app-colors-solarized
-Bundle 'altercation/vim-colors-solarized'
+"Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+
+" Theme
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme atom-dark-256
+set t_CO=256
+
+" Split management
+set splitbelow splitright
+
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
